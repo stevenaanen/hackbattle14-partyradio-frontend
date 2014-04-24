@@ -26,7 +26,7 @@ angular
 	.config(function(WebSocketProvider){
     WebSocketProvider
       .prefix('')
-      .uri('ws://echo.websocket.org/');
+      .uri('ws://localhost:8000');
 	})
 	.run(function($rootScope) {
 		$rootScope.API_VERSION = API_VERSION;
