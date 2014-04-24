@@ -13,4 +13,8 @@ angular.module('hackbattle14PartyradioFrontendApp')
 		}
 
 	});
+
+	$scope.submit = function(deezerID) {
+		$http.get('http://tnw2014-appophetweb.herokuapp.com/api/song/' + deezerID);
+	}
   });
