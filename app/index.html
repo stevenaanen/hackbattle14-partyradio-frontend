@@ -13,8 +13,8 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css({.tmp,app}) styles/styles.css -->
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- endbuild -->
   </head>
   <body ng-app="hackbattle14PartyradioFrontendApp">
@@ -45,12 +45,16 @@
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-websocket/angular-websocket.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/echonest.js"></script>
+        <script src="scripts/controllers/join.js"></script>
+        <script src="scripts/services/userservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>
