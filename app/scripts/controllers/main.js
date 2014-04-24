@@ -5,19 +5,19 @@ angular.module('hackbattle14PartyradioFrontendApp')
 		$scope.username = userService.getUsername();
 
 
-		// make sure we have connection
-		WebSocket.onopen(function() {
-			console.log('websocket connection');
+		// // make sure we have connection
+		// WebSocket.onopen(function() {
+		// 	console.log('websocket connection');
 
-			$scope.sendSuggestion = function() {
-				var object = JSON.stringify({event : "upvote"});
-				WebSocket.send(object);
-				$scope.suggestion = '';
-			};
-		});
+		// 	$scope.sendSuggestion = function() {
+		// 		var object = JSON.stringify({event : "upvote"});
+		// 		WebSocket.send(object);
+		// 		$scope.suggestion = '';
+		// 	};
+		// });
 
-		WebSocket.onmessage(function(event) {
-			console.log('websocket message: ', event.data);
-		});
+		// WebSocket.onmessage(function(event) {
+		// 	console.log('websocket message: ', event.data);
+		// });
 
 	});

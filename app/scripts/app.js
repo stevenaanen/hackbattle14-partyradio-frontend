@@ -19,6 +19,10 @@ angular
 				templateUrl: 'views/join.html',
 				controller: 'JoinCtrl'
 			})
+.when('/suggest', {
+  templateUrl: 'views/suggest.html',
+  controller: 'SuggestCtrl'
+})
 			.otherwise({
 				redirectTo: '/join'
 			});
