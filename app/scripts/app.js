@@ -14,6 +14,10 @@ angular
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
 			})
+			.when('/join', {
+				templateUrl: 'views/join.html',
+				controller: 'JoinCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
