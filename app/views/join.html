@@ -1,3 +1,5 @@
-<a href ng-if="!authenticated" ng-click="authenticate()">Join using Spotify</a>
+<span>Enter your username: </span>
 
-<span ng-if="authenticated">LOGGED IN!</span>
+<input type="text" placeholder="Username" ng-model="username">
+
+<button ng-click="submitUsername()">Start</button>
