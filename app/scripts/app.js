@@ -2,11 +2,12 @@
 
 var APP_VERSION = 'v0.0.1';
 var API_VERSION = 'v0.0.0';
-var NG_VERSION = angular.version.full + ' (' + angular.version.codeName + ')';
+// var NG_VERSION = angular.version.full + ' (' + angular.version.codeName + ')';
 
 angular
 	.module('hackbattle14PartyradioFrontendApp', [
-		'ngRoute'
+		'ngRoute',
+		'angular-websocket'
 	])
 	.config(function ($routeProvider) {
 		$routeProvider
@@ -21,6 +22,11 @@ angular
 			.otherwise({
 				redirectTo: '/join'
 			});
+	})
+	.config(function(WebSocketProvider){
+    WebSocketProvider
+      .prefix('')
+      .uri('ws://echo.websocket.org/');
 	})
 	.run(function($rootScope) {
 		$rootScope.API_VERSION = API_VERSION;
